@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>AntaGANize - Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid" style="padding: 30px 250px 0px 250px">
+    <div class="row">
+      <div class="col-sm-9 " style="margin-bottom: 0px">
+        <h1 style="margin-bottom: 0px; padding-left: 25px">AntaGANize</h1>
+      </div>
+      <div class="col-sm-3 title" style="margin-bottom: 0px">
+        <h4 style="margin-bottom: 0px">Help | About Us</h4>
+      </div>
+    </div>
+  </div>
+  <hr style="border-top: solid black; margin-top: 0px">
+  <div class="container-fluid" style="padding: 30px 250px 0px 250px">
+    <div class="row">
+      <div class="col-sm-7">
+        <form action="/action_page.php">
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="img">Select image:</label>
+              <br>
+              <img src="placeholder.jpg" alt="Placeholder image" height="300px" width="300px">
+              <input type="file" id="img" name="img" accept="image/*">
+            </div>
+            <div class="col-sm-6" style="padding-left: 30px">
+              <label for="model">Choose a model:</label>
+              <br>
+              <select name="model" id="model">
+                <option value="modela">Model A</option>
+                <option value="modelb">Model B</option>
+                <option value="modelc">Model C</option>
+              </select>
+              <br>
+              <label for="vol">Setting A:</label>
+              <input type="range" id="settinga" name="settinga" min="0" max="100">
+              <br>
+              <label for="vol">Setting B:</label>
+              <input type="range" id="settingb" name="settingb" min="0" max="100">
+
+              <input type="checkbox" id="settingc" name="settingc" value="settingc">
+              <label for="settingc">Setting C</label><br>
+              <input type="checkbox" id="settingd" name="settingd" value="settingd">
+              <label for="settingd">Setting D</label><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="center">
+              <button type="button" style="text-align: center;">Generate!</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-1">
+        <div class="vl"></div>
+      </div>
+      <div class="col-sm-4">
+        <img src="placeholder.jpg" alt="Placeholder image" height="300px" width="300px" class="center-image">
+        <br>
+        <div class="center">
+          <button type="button">Save Image</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
