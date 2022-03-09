@@ -15,10 +15,14 @@
     <div class="container-fluid" style="padding: 30px 250px 0px 250px">
         <div class="row">
             <div class="col-sm-9" style="margin-bottom: 0px">
-                <h1 style="margin-bottom: 0px; padding-left: 25px">AntaGANize</h1>
+                <h1 style="margin-bottom: 0px; padding-left: 25px"><a href="{% url 'antaganize:index' %}">AntaGANize</a></h1>
             </div>
             <div class="col-sm-3 title" style="margin-bottom: 0px">
-                <h4 style="margin-bottom: 0px">Help | About Us</h4>
+                <h4 style="margin-bottom: 0px">
+                    <a href="{% url 'antaganize:help' %}">Help</a> 
+                    | 
+                    <a href="{% url 'antaganize:about' %}">About Us</a>
+                </h4>
             </div>
         </div>
     </div>
