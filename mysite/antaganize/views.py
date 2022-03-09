@@ -3,14 +3,20 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-def index(request):
+def view_index(request):
+    """
+    main page
+    """
     context={}
     return render(request, 'antaganize/main.html', context)
 
-def help(request):
+def view_help(request):
+    """
+    help page
+    """
     context={}
     return render(request, 'antaganize/help.html', context)
 
-def about(request):
+def view_about(request):
     context={}
     return render(request, 'antaganize/about.html', context)

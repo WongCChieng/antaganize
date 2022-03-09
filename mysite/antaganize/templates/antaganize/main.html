@@ -6,7 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="main.css">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'antaganize/main.css' %}"">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
@@ -36,7 +37,8 @@
             <div class="col-sm-6">
               <label for="img">Select image:</label>
               <br>
-              <img src="placeholder.jpg" alt="Placeholder image" height="300px" width="300px">
+              {% load static %}
+              <img src="{% static 'antaganize/placeholder.jpg' %}" alt="Placeholder image" height="300px" width="300px">
               <input type="file" id="img" name="img" accept="image/*">
             </div>
             <div class="col-sm-6" style="padding-left: 30px">
@@ -71,7 +73,8 @@
         <div class="vl"></div>
       </div>
       <div class="col-sm-4">
-        <img src="placeholder.jpg" alt="Placeholder image" height="300px" width="300px" class="center-image">
+        {% load static %}
+        <img src="{% static 'antaganize/placeholder.jpg' %}" alt="Placeholder image" height="300px" width="300px" class="center-image">
         <br>
         <div class="center">
           <button type="button">Save Image</button>

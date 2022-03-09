@@ -5,7 +5,7 @@ from . import views
 
 app_name='antaganize'
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('help/', views.help, name='help'),
-    path('about/', views.about, name='about')
+    path('', views.view_index, name='index'),
+    path('help/', views.view_help, name='help'),
+    path('about/', views.view_about, name='about')
 ]
