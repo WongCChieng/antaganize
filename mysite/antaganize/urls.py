@@ -1,5 +1,7 @@
 from unicodedata import name
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 from . import views
 
@@ -9,3 +11,4 @@ urlpatterns = [
     path('help/', views.view_help, name='help'),
     path('about/', views.view_about, name='about')
 ]
+

@@ -32,14 +32,25 @@
   <div class="container-fluid" style="padding: 30px 250px 0px 250px">
     <div class="row">
       <div class="col-sm-7">
-        <form action="/action_page.php">
+        <!-- <form action="/action_page.php"> -->
           <div class="row">
             <div class="col-sm-6">
               <label for="img">Select image:</label>
               <br>
-              {% load static %}
-              <img src="{% static 'antaganize/placeholder.jpg' %}" alt="Placeholder image" height="300px" width="300px">
-              <input type="file" id="img" name="img" accept="image/*">
+              
+              {% if file_url %}
+                <img src="{{ file_url }}" alt="source" style="max-height:100px">
+              {% else %}
+                {% load static %}
+                <img src="{% static 'antaganize/placeholder.jpg' %}" alt="Placeholder image" height="300px" width="300px">
+              {% endif %}
+              
+              <form method="post" enctype="multipart/form-data" action="">
+                {% csrf_token %}
+                 {{ form.as_p }}
+                <button type="submit">Upload</button>
+              </form>
+              
             </div>
             <div class="col-sm-6" style="padding-left: 30px">
               <label for="model">Choose a model:</label>
@@ -67,7 +78,7 @@
               <button type="button" style="text-align: center;">Generate!</button>
             </div>
           </div>
-        </form>
+        <!-- </form> -->
       </div>
       <div class="col-sm-1">
         <div class="vl"></div>
